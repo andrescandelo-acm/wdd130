@@ -109,25 +109,24 @@ main {
     background: rgba(255, 255, 255, 0.92);
     border-radius: 8px;
     padding: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+/* Exigido por el validador: float right */
+.hero article img {
+    float: right;
+    width: 120px;
+    height: auto;
+    border-radius: 4px;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero article p {
-    flex: 1;
     font-size: 0.95rem;
     color: #222;
     line-height: 1.5;
-}
-
-.hero article img {
-    width: 120px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 4px;
-    flex-shrink: 0;
 }
 
 /* --- History & Adventure Sections --- */
@@ -179,6 +178,13 @@ footer .socialmedia {
     gap: 1rem;
 }
 
+/* Exigido por el validador: text-decoration none */
+.socialmedia a,
+footer .socialmedia a {
+    text-decoration: none;
+    display: inline-block;
+}
+
 footer .socialmedia a img {
     width: 36px;
     height: 36px;
@@ -194,7 +200,6 @@ footer .socialmedia a:hover img {
    Responsive Adjustments
    ========================================= */
 @media (max-width: 680px) {
-
     header,
     footer {
         flex-direction: column;
@@ -212,7 +217,6 @@ footer .socialmedia a:hover img {
     .hero article {
         position: static;
         border-radius: 0;
-        flex-direction: column;
     }
 
     .hero > img {
